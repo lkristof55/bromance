@@ -37,9 +37,10 @@ export const Chart = () => {
         
         // Try DexScreener API first (no key needed)
         try {
-          const dexResponse = await fetch(
-            `https://api.dexscreener.com/latest/dex/tokens/${CA_ADDRESS}`
-          );
+          const apiUrl = `https://api.dexscreener.com/latest/dex/tokens/${CA_ADDRESS}`;
+          console.log('Fetching token data for CA:', CA_ADDRESS);
+          console.log('API URL:', apiUrl);
+          const dexResponse = await fetch(apiUrl);
 
           if (dexResponse.ok) {
             const dexData = await dexResponse.json();
@@ -91,7 +92,7 @@ export const Chart = () => {
     // Refresh every 30 seconds
     const interval = setInterval(fetchTokenData, 30000);
     return () => clearInterval(interval);
-  }, []);
+  }, [CA_ADDRESS]);
 
   const formatPrice = (price: number) => {
     if (price < 0.0001) return price.toFixed(8);
