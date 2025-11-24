@@ -3,7 +3,6 @@ import { Hero } from './components/Hero';
 import { Timeline } from './components/Timeline';
 import { Tokenomics } from './components/Tokenomics';
 import { WhyBuy } from './components/WhyBuy';
-import { Chart } from './components/Chart';
 import { BuySection } from './components/BuySection';
 import { Footer } from './components/Footer';
 import { EffectsOverlay } from './components/EffectsOverlay';
@@ -49,7 +48,6 @@ export default function App() {
           <Timeline />
           <Tokenomics />
           <WhyBuy />
-          <Chart />
           <BuySection />
         </div>
         
