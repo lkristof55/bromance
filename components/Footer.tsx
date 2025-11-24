@@ -14,7 +14,7 @@ export const Footer = () => {
                 className="hover:text-saudi-gold hover:animate-shake transition-colors flex flex-col items-center gap-2"
             >
                 <Twitter className="w-8 h-8" />
-                <span>X</span>
+                <span>BromanceCoinOnX</span>
             </a>
         </div>
 
