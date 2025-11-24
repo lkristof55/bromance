@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>CLASSIFIED // $BROMANCE 2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'midnight': '#0b132b',
+              'saudi-gold': '#d4af37',
+              'maga-red': '#c41e3a',
+              'burning-orange': '#ff4500',
+              'paper': '#f4f1ea',
+            },
+            fontFamily: {
+              'presidential': ['"Playfair Display"', 'serif'],
+              'cia': ['"Courier Prime"', 'monospace'],
+              'handwriting': ['"Caveat"', 'cursive'],
+            },
+            backgroundImage: {
+              'wood-pattern': "url('https://www.transparenttextures.com/patterns/dark-wood.png')",
+              'noise': "url('https://www.transparenttextures.com/patterns/stardust.png')",
+            },
+            animation: {
+              'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'pat-slide': 'patSlide 3s ease-in-out',
+              'fade-in-float': 'fadeInFloat 1s ease-out forwards',
+            },
+            keyframes: {
+              shake: {
+                '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              patSlide: {
+                '0%': { transform: 'translateX(100%)' },
+                '40%': { transform: 'translateX(0)' },
+                '60%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(100%)' },
+              },
+              fadeInFloat: {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        cursor: none; /* Hide default cursor for custom dagger */
+      }
+      /* Custom Scrollbar for the Classified Folder look */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b132b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4af37; 
+        border: 2px solid #0b132b;
+      }
+      .redacted {
+        background-color: black;
+        color: black;
+        padding: 0 4px;
+        transition: color 0.3s ease;
+      }
+      .redacted:hover {
+        color: white;
+      }
+      .paper-texture {
+        background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+      }
+      .stamp-rotate {
+        transform: rotate(-15deg);
+        mask-image: url('https://www.transparenttextures.com/patterns/grunge-wall.png');
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-midnight text-paper font-cia overflow-x-hidden antialiased selection:bg-maga-red selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

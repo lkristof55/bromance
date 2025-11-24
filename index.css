@@ -1,0 +1,37 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom Timeline Scrollbar - matching website style */
+.timeline-scrollbar::-webkit-scrollbar {
+  height: 12px;
+}
+
+.timeline-scrollbar::-webkit-scrollbar-track {
+  background: #0b132b;
+  border-radius: 6px;
+}
+
+.timeline-scrollbar::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border: 2px solid #0b132b;
+  border-radius: 6px;
+}
+
+.timeline-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b8941f;
+}
+
+/* Firefox scrollbar for timeline */
+.timeline-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d4af37 #0b132b;
+}
+
