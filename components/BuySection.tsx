@@ -1,6 +1,6 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
-import { CA_ADDRESS } from '../constants';
+import { PUMP_FUN_URL } from '../constants';
 
 export const BuySection = () => {
   return (
@@ -13,47 +13,21 @@ export const BuySection = () => {
       </div>
 
       <div className="flex flex-col gap-6 max-w-2xl mx-auto">
-        
         <a 
-            href={`https://jup.ag/swap/SOL-${CA_ADDRESS}`} 
+            href={PUMP_FUN_URL} 
             target="_blank" 
             rel="noreferrer"
-            className="group relative w-full py-6 bg-burning-orange/90 overflow-hidden border-2 border-transparent hover:border-white transition-all shadow-[0_0_20px_rgba(255,69,0,0.4)]"
+            className="group relative w-full py-8 bg-burning-orange/90 overflow-hidden border-4 border-saudi-gold hover:border-white transition-all shadow-[0_0_30px_rgba(255,69,0,0.6)] hover:shadow-[0_0_50px_rgba(255,69,0,0.8)]"
         >
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
             <div className="relative z-10 flex items-center justify-center gap-4">
-                <span className="font-presidential font-bold text-2xl text-white group-hover:scale-110 transition-transform">BUY ON JUPITER</span>
-                <ExternalLink className="text-white w-6 h-6 group-hover:rotate-45 transition-transform" />
+                <span className="font-presidential font-bold text-3xl md:text-4xl text-white group-hover:scale-110 transition-transform uppercase tracking-wider">
+                    Buy on PumpFun
+                </span>
+                <ExternalLink className="text-white w-8 h-8 group-hover:rotate-45 transition-transform" />
             </div>
-            <div className="absolute bottom-0 left-0 h-1 bg-white transition-all duration-300 w-0 group-hover:w-full"></div>
+            <div className="absolute bottom-0 left-0 h-2 bg-white transition-all duration-300 w-0 group-hover:w-full"></div>
         </a>
-
-        <a 
-            href={`https://raydium.io/swap/?inputCurrency=sol&outputCurrency=${CA_ADDRESS}`}
-            target="_blank" 
-            rel="noreferrer"
-            className="group relative w-full py-6 bg-purple-900/90 overflow-hidden border-2 border-transparent hover:border-white transition-all shadow-[0_0_20px_rgba(128,0,128,0.4)]"
-        >
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
-            <div className="relative z-10 flex items-center justify-center gap-4">
-                <span className="font-presidential font-bold text-2xl text-white group-hover:scale-110 transition-transform">BUY ON RAYDIUM</span>
-                <ExternalLink className="text-white w-6 h-6 group-hover:rotate-45 transition-transform" />
-            </div>
-             <div className="absolute bottom-0 left-0 h-1 bg-white transition-all duration-300 w-0 group-hover:w-full"></div>
-        </a>
-
-        <a 
-            href={`https://phantom.app/ul/browse/https://jup.ag/swap/SOL-${CA_ADDRESS}?ref=jup_ag`}
-            className="group relative w-full py-6 bg-gray-800/90 overflow-hidden border-2 border-transparent hover:border-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-        >
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
-             <div className="relative z-10 flex items-center justify-center gap-4">
-                <span className="font-presidential font-bold text-2xl text-white group-hover:scale-110 transition-transform">BUY WITH PHANTOM</span>
-                <ExternalLink className="text-white w-6 h-6 group-hover:rotate-45 transition-transform" />
-            </div>
-             <div className="absolute bottom-0 left-0 h-1 bg-white transition-all duration-300 w-0 group-hover:w-full"></div>
-        </a>
-
       </div>
     </section>
   );
