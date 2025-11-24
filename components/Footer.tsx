@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Send } from 'lucide-react';
+import { Twitter } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -7,25 +7,14 @@ export const Footer = () => {
       <div className="max-w-4xl mx-auto space-y-8 text-center">
         
         <div className="flex justify-center gap-8">
-            {/* TODO: Replace with actual Twitter/X link */}
             <a 
-                href="https://twitter.com/BROMANCE_SOL" 
+                href="https://x.com/BromanceCoinOnX" 
                 target="_blank" 
                 rel="noreferrer noopener"
                 className="hover:text-saudi-gold hover:animate-shake transition-colors flex flex-col items-center gap-2"
             >
                 <Twitter className="w-8 h-8" />
-                <span>@BROMANCE_SOL</span>
-            </a>
-            {/* TODO: Replace with actual Telegram link */}
-            <a 
-                href="https://t.me/BROMANCE_SOL" 
-                target="_blank" 
-                rel="noreferrer noopener"
-                className="hover:text-saudi-gold hover:animate-shake transition-colors flex flex-col items-center gap-2"
-            >
-                <Send className="w-8 h-8" />
-                <span>TELEGRAM CHANNEL</span>
+                <span>X</span>
             </a>
         </div>
 
