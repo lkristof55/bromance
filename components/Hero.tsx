@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Copy, CheckCircle } from 'lucide-react';
-import { CA_ADDRESS } from '../constants';
+import { CA_ADDRESS, PUMP_FUN_URL } from '../constants';
 
 export const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -61,7 +61,9 @@ export const Hero = () => {
       {/* Buttons */}
       <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl items-center justify-center pt-8">
         <a 
-            href="#buy-section"
+            href={PUMP_FUN_URL}
+            target="_blank"
+            rel="noreferrer"
             className="w-full md:w-auto px-8 py-4 bg-maga-red text-white font-presidential font-bold text-xl uppercase tracking-widest border-2 border-white shadow-[4px_4px_0px_0px_#fff] hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:animate-shake transition-all"
         >
             Buy Now Before They Fight Again
