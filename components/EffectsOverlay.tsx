@@ -12,7 +12,6 @@ interface Particle {
 export const EffectsOverlay: React.FC<{ clickTrigger: number }> = ({ clickTrigger }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [particles, setParticles] = useState<Particle[]>([]);
-  const [showHand, setShowHand] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Custom Cursor Logic
@@ -51,21 +50,6 @@ export const EffectsOverlay: React.FC<{ clickTrigger: number }> = ({ clickTrigge
     }, 1000);
 
   }, [clickTrigger]);
-
-  // Random Hand Animation (Every 18-25 seconds)
-  useEffect(() => {
-    const triggerHand = () => {
-      setShowHand(true);
-      setTimeout(() => setShowHand(false), 3000); // Animation duration
-      
-      const nextTime = (Math.random() * (25000 - 18000)) + 18000;
-      timeoutRef.current = setTimeout(triggerHand, nextTime);
-    };
-
-    let timeoutRef = { current: setTimeout(triggerHand, 20000) };
-    
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999] overflow-hidden" ref={containerRef}>
@@ -112,18 +96,6 @@ export const EffectsOverlay: React.FC<{ clickTrigger: number }> = ({ clickTrigge
           )}
         </div>
       ))}
-
-      {/* Random Hand Animation */}
-      <div 
-        className={`fixed right-0 top-1/2 -translate-y-1/2 transition-transform duration-[3000ms] ease-in-out ${showHand ? 'translate-x-0' : 'translate-x-full'}`}
-      >
-         <img 
-            src="https://png.pngtree.com/png-vector/20230906/ourmid/pngtree-ok-hand-gesture-png-image_9997879.png" // Placeholder for tiny hand
-            alt="Tiny Hand"
-            className="w-64 h-auto transform rotate-[-90deg] filter drop-shadow-2xl"
-            style={{ filter: 'sepia(0.5) hue-rotate(-30deg) saturate(3)' }} // Orange skin tone hack
-         />
-      </div>
 
     </div>
   );
